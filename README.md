@@ -2,4 +2,4 @@
 
 👨🏼‍💻 Built by using HTML,CSS and JavaScript.
 
-✅ You can view the website here : www.simpleetodolist.netlify.app
+✅ You can view the website here : https://simpleetodolist.netlify.app
