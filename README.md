@@ -1,5 +1,5 @@
-Simple to-do list project.
+⚡️ Simple to-do list project.
 
-Built by using HTML,CSS and JavaScript.
+👨🏼‍💻 Built by using HTML,CSS and JavaScript.
 
-You can view the website here : www.simpleetodolist.netlify.app
+✅ You can view the website here : www.simpleetodolist.netlify.app
