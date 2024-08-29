@@ -1,66 +1,106 @@
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
-
-
-#container {
-    font-family: Arial, sans-serif; /* Use Arial as the primary font, with fallback to a generic sans-serif font */
-}
-
-
-
 
 
 body {
-  background-color: rgb(251, 251, 251); 
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-.header {
-  border: 3px solid black;
-  margin-bottom: 10px;
-  background-color: rgb(0, 160, 235);
-  color: white;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
 }
 
 .todo-title {
-  font-size: 32px;
-  margin: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
 }
 
-input[type="text"] {
-  flex: 1; /* Take up remaining space */
-  height: 25px;
-  margin: 10px;
+.input-group {
+  display: flex;
+  margin-bottom: 1rem;
 }
 
-button {
-  width: 100px;
-  height: 25px;
+#taskInput {
+  flex-grow: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
 }
 
-ul {
+#addTaskBtn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+  background-color: #2980b9;
+}
+
+#taskList {
   list-style-type: none;
-  padding: 0; /* Remove default padding */
+  padding: 0;
 }
 
-ul li {
-  display: flex; /* Make the list item a flex container */
-  align-items: center; /* Vertically center the checkbox and text */
-  margin-top: 10px;
-  gap: 20px;
+#taskList li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-ul li input[type="checkbox"] { 
-  border: 2px solid black;
-  display: inline-block;
-  vertical-align: middle; 
-  margin-right: 5px;  /* Optional - adds a little space to the right */
+#taskList li button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.items {
-  padding-left: 0;
-  padding: 5px;
+#taskList li button:hover {
+  background-color: #c0392b;
 }

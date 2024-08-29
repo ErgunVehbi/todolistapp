@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <!-- ... existing meta tags and title ... -->
     <link rel="stylesheet" href="reset.css"> 
     <link rel="stylesheet" href="index.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div id="container">
         <main>
-            <section>
-            <div class="myToDo">
-                <div class="header">
-                <h2 class= "todo-title">My To-Do List</h2>
-                <input type="text" id ="taskInput"  placeholder="Enter your to-do item">
-                <button id = "addTaskBtn">Add Task</button>
-                
-            </div>
-        </section>
-
-            <section>
-            <div class="items">
-                <ul id="taskList"> 
-                </ul>
-            </div>
-        </section> 
+            <section class="todo-section">
+                <h1 class="todo-title">My To-Do List</h1>
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Enter your to-do item">
+                    <button id="addTaskBtn">Add Task</button>
+                </div>
+                <ul id="taskList"></ul>
+            </section>
         </main>
-   
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
